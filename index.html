@@ -49,11 +49,11 @@
                 </div>
             </section>
         </div>
-        <a name portafolio id="portafolio"></a>
+        <a name="portfolio" id="portfolio"></a>
         <div class="menu" id="top">
             <ul>
                 <li><a href="#about">about</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="current">portfolio</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </div>
@@ -61,7 +61,7 @@
             <div class="fade-left fade">
 
             </div>
-            <div class="list-container" style="overflow:hiddeb">
+            <div class="list-container" style="overflow:hidden">
                 <ul id="list" style="width:5480px;">
                     <li class="item space"><img "src img/log.jpg" alt="just ned an image" // aqui nos quedamos width="1" height "1"</li>
                         <li class="item short"></li>
@@ -70,7 +70,18 @@
                         <li class="item"></li>
                 </ul>
             </div>
+            <div class="fade-right fade>"> </div>
         </div>
+        <a name "contact" id="contact"></a>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#portafolio">portafolio</a></li>
+                <li class="current">contact</li>
+            </ul>
+        </div>
+
 
 
         <div class="container" class="container foota">
@@ -79,26 +90,49 @@
                     <div class="content">
                         <h1>"You have come so far ... Send us a message!"
                        <br>
-                       "Email"
+                       Email
                        <a href="mailto:tatellog@gmail.com">tatellog@gmail.com</a>
                        <br>
-                       "Call"
+                       Call
                        <span class="succes">0445547268810</span>               
                        </h1>
                         <h1>or come see us!</h1>
                         <h1 class="red">
-                           "Adress"
+                           Adress
                            <br>
-                           "Irlanda 63, Parque San Andres"
+                           Irlanda 63, Parque San Andres
                            <br>
-                           "Delegación Coyoacan"
+                           Delegación Coyoacan
                        </h1>
 
                     </div>
                 </div>
-
+                <div class="rCol">
+                    <h1>Or use this form</h1>
+                    <form id="myForm" action="">
+                        <fieldset>
+                            <div id="log">
+                                <div id="log_res"></div>
+                            </div>
+                            <label>Name:</label>
+                            <input type="text" name="first_name">
+                            <label>
+                                <span class="error">*</span>E.Mail:
+                            </label>
+                            <input type="text" name="e_mail">
+                            <label>
+                                <span class="error">*</span>Message:
+                            </label>
+                            <textarea name="message" cols="40" rows="5"></textarea>
+                            <div class="clear"></div>
+                            <input type="submit" name="button" id="submitter">
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
+        <div class="clear"></div>
+
 
         <section id="container"></section>
         <footer id="contact"></footer>
