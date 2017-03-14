@@ -5,9 +5,11 @@
 <meta name="description" content="Pagina Web personal">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-
-<head>
-    <title>Wine Programming</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+<!-- Latest compiled and minified CSS  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+-->
+<link rel="stylesheet" <head>
+<title>TaniaTello</title>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
                 <div id="aboutMe">
                     <p>
 
-                        My goal is to be able to grow in knowledge in areas of information technology since I have the strong idea that the new technol n knowledge in areas of information technology since I have the strong idea that the new technol
+                        My goal is to be able to grow in knowledge in areas of information technology since I have the strong idea that the new technology and knowledge in areas of information technology since I have the strong idea that the new technology
                     </p>
                     <p>&nbsp;</p>
                     <p>
@@ -42,7 +44,7 @@
 
                 </div>
                 <div id="Ido">
-                    <p>Design Develpment WEB etc Design responsive, Animation, Front End UX/UI.
+                    <p>Design Develpment WEB etc Design responsive, Animation, Front-End UX/UI.
                         <p>&nbsp;</p>
                         <p>Friendly free advice...</p>
                     </p>
@@ -77,7 +79,7 @@
         <div class="menu">
             <ul>
                 <li><a href="#about">about</a></li>
-                <li><a href="#portafolio">portafolio</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
                 <li class="current">contact</li>
             </ul>
         </div>
@@ -107,7 +109,7 @@
 
                     </div>
                 </div>
-                <div class="rCol">
+                <div ng-app class="rCol">
                     <h1>Or use this form</h1>
                     <form id="myForm" action="">
                         <fieldset>
@@ -115,7 +117,10 @@
                                 <div id="log_res"></div>
                             </div>
                             <label>Name:</label>
-                            <input type="text" name="first_name">
+                            <input type="text" placeholder="Your name" ng-model=name>
+                            <input type="text" placeholder="color" ng-model=color>
+                            <br>
+                            <h1 class="text-{{color}}">Hello {{name}}!</h1>
                             <label>
                                 <span class="error">*</span>E.Mail:
                             </label>
@@ -133,9 +138,6 @@
         </div>
         <div class="clear"></div>
 
-
-        <section id="container"></section>
-        <footer id="contact"></footer>
 
     </section>
 
