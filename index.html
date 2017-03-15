@@ -5,9 +5,13 @@
 <meta name="description" content="Pagina Web personal">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
-<!-- Latest compiled and minified CSS  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
--->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<!-- Latest compiled and minified CSS 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+<script src="js/page.js"></script>
+<script src="js/main.js"></script>
 <link rel="stylesheet" <head>
 <title>TaniaTello</title>
 </head>
@@ -109,32 +113,103 @@
 
                     </div>
                 </div>
-                <div ng-app class="rCol">
-                    <h1>Or use this form</h1>
-                    <form id="myForm" action="">
+
+
+                <div ng-app="todoAp" class="rCol">
+                    <!-- tutorial angular
+
+                    <div ng-controller="ControladorTareas as ctrl">
+                        <span>{{ctrl.restantes()}} de {{ctrl.tareas.length}}</span> [ <a class="text-danger" href="" ng-click="ctrl.eliminar()">delete</a> ]
+                        <ul class="unstyled">
+                            <li ng-repeat="tarea in ctrl.tareas">
+                                <input type="checkbox" ng-model="tarea.heccho" </li>
+                                <span class="hecho-{{tarea.heccho}}">{{tarea.texto}}</span>
+                        </ul>
+                        <form ng-submit="agregarTarea">
+                            <input type="texto" size="30" placeholder="Add a task" ng-model="ctrl.textoNuevaTarea">
+                            <button class="btn btn-primary" type="submit" ng-click="ctrl.agregarTarea()">Add</button>
+                        </form>
+                    </div>
+-->
+
+
+                    <h1>Or use this form:</h1>
+
+
+                    <div ng-app>
+                        <form id="myForm" role="form" name="forma">
+                            <fieldset>
+                                <div id="log">
+                                    <div id="log_res"></div>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error': forma.nombreU.$invalid, 'has-success': forma.nombreU.$valid}">
+                                    <label>
+                                        <span class="error">*</span>Name:
+                                    </label>
+
+                                    <input id="inputNombre" type="text" class="form-control" placeholder="yourName" name="nombreU" ng-model="usuario.nombre" required>
+                                </div>
+                                <label>
+                                    <span class="error">*</span>E.Mail:
+                                </label>
+                                <div class="form-group" ng-class="{'has-error': forma.emailU.$invalid, 'has-success': forma.emailU.$valid}">
+                                    <label for="inputEmail"></label>
+                                    <input id="inputEmail" type="email" class="form-control" placeholder="your email" name="emailU" ng-model="usuario.email" required>
+                                    <div ng-show="forma.emailU.$dirty && forma.emailU.$invalid">
+                                        <p class="help-block text-danger" ng-show="forma.emailU.$error.required">Campo obligatorio</p>
+                                        <p class="help-block text-danger" ng-show="forma.emailU.$error.email">Email invalido</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>
+                                        <span class="error"></span>Message:
+                                    </label>
+                                    <textarea name="message" cols="40" rows="5" placeholder="write your msg"></textarea>
+                                </div>
+                                <div class="clear"></div>
+
+                                <input type="submit" name="button" id="submitter" ng-disabled="forma.$invalid">
+
+                            </fieldset>
+                        </form>
+
+                        <hr>
+
+                    </div>
+                </div>
+
+
+
+                <!-- 
+                    <form role="form" name="forma" id="myForm" action="" ng-app>
                         <fieldset>
                             <div id="log">
                                 <div id="log_res"></div>
                             </div>
                             <label>Name:</label>
-                            <input type="text" placeholder="Your name" ng-model=name>
-                            <input type="text" placeholder="color" ng-model=color>
-                            <br>
-                            <h1 class="text-{{color}}">Hello {{name}}!</h1>
+                            <input type="text" placeholder="your name" name="nombreU" ng-model="usuario.nombre" required>
                             <label>
                                 <span class="error">*</span>E.Mail:
                             </label>
-                            <input type="text" name="e_mail">
+                            <input type="text" name="e_mail" placeholder="your email" name="emailU" ng-model="usuario.email" required>
                             <label>
                                 <span class="error">*</span>Message:
                             </label>
                             <textarea name="message" cols="40" rows="5"></textarea>
                             <div class="clear"></div>
-                            <input type="submit" name="button" id="submitter">
+                            <input type="submit" name="button" id="submitter" ng-disabled="forma.$invalid">
+                            <div ng-show="forma.emailU.$dirty && forma.emailU.$invalid">
+                                <p class="help-block text-danger" ng-show="forma.emailU.$error.required">Campo obligatorio</p>
+                                <p class="help-block text-danger" ng-show="forma.emailU.$error.email">Email invalido</p>
+                            </div>
                         </fieldset>
                     </form>
-                </div>
+                    -->
             </div>
+
+
+            <!-- examples angular-->
+        </div>
         </div>
         <div class="clear"></div>
 
