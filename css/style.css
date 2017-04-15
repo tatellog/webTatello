@@ -827,7 +827,39 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
 	.sp-slideshow { height: 158px; }
 }
 
-#conact{
-
+#conact {
     background-color: rgb(232, 77, 91);
+}
+
+.contactIcons {
+    width: 20px;
+    font-family: Roboto, sans-serif;
+    display: block;
+}
+
+.imgIcon {
+    margin-bottom: 5px
+}
+
+text {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    color: #F5F7FA;
+    white-space: nowrap;
+    display: block;
+    cursor: pointer;
+}
+
+text:hover {
+    color: #b5f809;
+}
+
+h1{
+     
+   color: rgb(236, 240, 241);
+    font-weight: 100;
+    font-size: 30;
+    font-family: Roboto,sans-serif;
+    
 }
